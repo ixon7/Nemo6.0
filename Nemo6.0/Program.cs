@@ -42,8 +42,8 @@ namespace Nemo6._0
 
             //posortuj liste po imieniu a potem po nazwisku
 
-            osoby.OrderBy(x => x.imie);
-            foreach (var item in osoby)
+            var sortpoimieniuinaz = osoby.OrderBy(x => x.imie).OrderBy(x =>x.nazwisko);
+            foreach (var item in sortpoimieniuinaz)
             {
                 Console.WriteLine($"{item.imie}:{item.nazwisko}:{item.id}");
             }
